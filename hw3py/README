@@ -1,0 +1,34 @@
+#
+# The Knapsack Problem
+# CS 131 - Artificial Intelligence
+#
+# Varleen Biketi
+# 3/11/2024
+
+
+# Genetic Algorithm for Backpack Problem
+
+This Python script implements a genetic algorithm to solve the Knapsack problem: 
+given a set of boxes with different weights and importance values, the goal is 
+to fill a backpack of limited capacity to maximize the total importance without exceeding the weight limit.
+
+## Assumptions
+
+1. Unique Boxes: The list of boxes provided in the code represents a unique set of items. Duplicates are not allowed in the solution.
+
+2. Binary Representation: The genome, representing a potential solution, uses a binary string where each gene corresponds to 
+whether the respective box is included (1) or not included (0) in the backpack.
+
+3. Random Initialization: The initial population is generated randomly.
+
+4. Fitness Function: The fitness of an individual is determined by the total importance of the selected boxes.
+
+5. Culling Population: After each generation, the algorithm culls the population by 50%, keeping the top-performing 
+individuals based on their fitness.
+
+6. Crossover and Mutation: Crossover is applied to selected pairs of parents to create offspring, 
+and mutation introduces small random changes in the offspring genomes.
+
+## Operating Instructions
+
+You can run the program by executing the script in your Python environment.

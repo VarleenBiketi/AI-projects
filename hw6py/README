@@ -1,0 +1,54 @@
+# Iris Plant Classification using Artificial Neural Networks
+#
+# CS 131 - Artificial Intelligence
+#
+# Varleen Biketi
+# 4/28/2024
+
+This project provides a Python solution for classifying Iris plants based on the famous Iris dataset by R.A. Fisher. The script employs a neural network model built using TensorFlow and Keras to predict the species of Iris plants. It is designed to both validate the model's accuracy with the known dataset and to allow users to input new measurements for classification in real-time.
+
+## Project Structure
+
+- `main.py`: The main Python script that includes data loading, model building, training, evaluation, and a function for making predictions based on user input.
+
+## Assumptions
+
+1. **Data Format**: The script assumes the Iris dataset is in a comma-separated values (CSV) format with no header row. The expected columns are `sepal length`, `sepal width`, `petal length`, `petal width`, and `class` in that order.
+
+2. **Model Input**: The model expects input as four floating-point numbers:
+   - Sepal Length (in cm)
+   - Sepal Width (in cm)
+   - Petal Length (in cm)
+   - Petal Width (in cm)
+
+3. **Environment**: The script is designed to run in an environment where Python and necessary libraries (TensorFlow, NumPy, Pandas, Scikit-Learn) are installed.
+
+4. **Data Scaling**: It is assumed that input data for prediction must be scaled using the same parameters as the training data. This scaling is handled internally by the script using `StandardScaler` from Scikit-Learn.
+
+5. **Label Encoding**: The class labels are encoded numerically in the order they appear in the dataset. It is assumed that the dataset is balanced across these classes.
+
+6. **User Input**: User inputs are collected via the command line and should be entered one at a time when prompted. Incorrect or non-numeric inputs are handled , prompting the user to re-enter the data.
+
+## How to Run the Script
+
+1. Ensure you have Python 3x installed along with the required libraries:
+   - TensorFlow
+   - NumPy
+   - Pandas
+   - Scikit-Learn
+
+2. Place your Iris dataset in a known directory and ensure it is in the correct CSV format as described.
+
+3. Run the script from the command line
+
+4. Follow the on-screen prompts to enter Iris measurements for classification.
+
+5. The script will display the predicted Iris class immediately after each query.
+
+## Dependencies
+
+- TensorFlow: For building and running the neural network.
+- Pandas: For data manipulation and reading CSV files.
+- NumPy: For numerical operations.
+- Scikit-Learn: For data preprocessing (scaling and label encoding).
+

@@ -1,0 +1,37 @@
+# Radar Trace Classifier
+#
+# CS 131 - Artificial Intelligence
+#
+# Varleen Biketi
+# 4/21/2024
+
+This solution is designed to classify radar traces into two categories: birds and airplanes. It utilizes a Naïve Recursive Bayesian Classifier approach, focusing on velocity as the primary feature for classification, while incorporating additional features derived from the data.
+
+## Solution Overview
+
+The classifier is built around the Bayesian probability principle, using velocity data points to compute the likelihood of each trace belonging to the bird or airplane class. Additional statistical features are also considered to enhance the classifier's performance due to the limitations of using only velocity.
+
+
+## Assumptions
+
+1. **Data Structure**: Assumes that input data files are formatted correctly and space-separated. These files include 'likelihood.txt' for precomputed likelihoods based on training data, 'dataset.txt' for training data with known class labels, and 'testing.txt' for unlabeled test data.
+
+2. **NaN Values Handling**: Assumes that the occurrence of NaN values in data is minimal . These NaN values are interpolated linearly, and if any NaN persists (e.g., at the edges), they are filled using the nearest valid observations.
+
+3. **Velocity as a Primary Feature**: Assumes that velocity is a significant discriminator between birds and airplanes, as suggested by the data provided. The solution, therefore, primarily uses velocity for initial likelihood estimations.
+
+4. **Additional Features**: Assumes that additional derived features (standard deviation, velocity range, and mean velocity change) provide significant supplementary information to enhance classification accuracy. These features reflect the behavioral differences in movement patterns between birds and airplanes.
+
+5. **Stability and Conservatism in Transitions**: Assumes that transitions between class predictions should be conservative, reflecting the continuity in object movement. The classifier, therefore, uses a fixed transition probability model to manage predictions over sequential data points smoothly.
+
+6. **Log Probabilities**: To handle the multiplication of small probability values and avoid numerical underflow, the solution assumes the use of log probabilities is more stable and computationally efficient.
+
+## Implementation Details
+
+- **Python Libraries**: Utilizes `pandas` for data manipulation and `numpy` for numerical operations.
+- **Error Handling**: Includes handling for possible issues such as division by zero when calculating log probabilities by clipping values to a minimal non-zero threshold.
+- **Performance Considerations**: Employs vectorized operations where possible to optimize the performance and scalability of the solution.
+
+## Usage
+
+You can run the program by executing the script in your Python environment.

@@ -1,0 +1,29 @@
+#
+# Pancake Problem Solver
+# CS 131 - Artificial Intelligence
+#
+# Varleen Biketi
+# 2/26/2024
+
+
+This project contains a Python implementation of two search algorithms, Uniform Cost Search and A* Search, 
+to solve the Pancake Problem.
+The goal is for the cook to have them in the “correct” order for the customer, that is, 
+the large on the bottom up to the smallest on top ([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]).
+
+## Installation
+
+You can run the program by executing the script in your Python environment.
+
+### Assumptions
+This program generates a random list of a disordered stack of 10 differently 
+sized pancakes [size from 1 to 10] in each evaluation.
+
+The backward cost function is calculated based on the number of pancakes out of place.
+
+The forward cost is calculated based on the gap heuristic where the number of stack positions with 
+non-adjacent sized pancakes are counted.
+
+The heap data structure is used to store the stack of pancakes and a priority queue to pop the pancake size 
+with minimum cost.
+

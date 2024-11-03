@@ -1,0 +1,26 @@
+#
+# Sudoku solver
+# CS 131 - Artificial Intelligence
+#
+# Varleen Biketi
+# 3/27/2024
+
+This Python script implements a Sudoku puzzle solver using a Constraint Satisfaction Problems (CSP) approach.
+
+## Overview
+
+The Sudoku solver utilizes a Constraint Satisfaction Problems approach to systematically explore possible assignments of digits to empty cells while ensuring that the constraints of the puzzle (no repeated digits in rows, columns, or 3x3 subgrids) are satisfied. The solver employs a backtracking algorithm to efficiently search for a valid solution.
+
+## Assumptions
+
+1. **Valid Input**: The input Sudoku puzzle provided to the solver must be a 9x9 grid represented as a list of lists, where each inner list corresponds to a row of the Sudoku grid. Empty cells are represented by the value 0.
+
+2. **Backtracking Algorithm**: The solver uses a recursive backtracking algorithm to explore possible assignments for each empty cell while ensuring that the constraints of the puzzle are satisfied. If a dead-end is reached, the algorithm backtracks and explores alternative assignments.
+
+3. **Efficient Constraint Checking**: The solver efficiently checks constraints by examining rows, columns, and 3x3 subgrids to ensure that no repeated digits are present.
+
+## Operating Instructions
+
+You can run the program by executing the script in your Python environment.
+
+The program shows each  step to solve the puzzle and may run for about 30 seconds before printing the final output.
